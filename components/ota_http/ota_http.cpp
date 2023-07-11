@@ -66,7 +66,7 @@ bool http_connect(HTTPClient *client_, std::string url) {
     if (wifi_client_secure_ == nullptr) {
       wifi_client_secure_ = std::make_shared<BearSSL::WiFiClientSecure>();
       //wifi_client_secure_->setInsecure();
-      wifi_client_secure_->setBufferSizes(512, 512);
+      //wifi_client_secure_->setBufferSizes(512, 512);
     }
     wifi_client_ = wifi_client_secure_;
   }
