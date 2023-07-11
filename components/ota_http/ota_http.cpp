@@ -60,7 +60,7 @@ bool http_connect(HTTPClient *client_, std::string url) {
   // ESP8266 code not tested
   std::shared_ptr<WiFiClient> wifi_client_;
 #ifdef USE_HTTP_REQUEST_ESP8266_HTTPS
-  bool secure_ = url_.compare(0, 6, "https:") == 0;
+  bool secure_ = url_.startsWith("https:") == 0;
   if (secure_) {
     std::shared_ptr<WiFiClient> wifi_client_secure_;
     if (wifi_client_secure_ == nullptr) {
