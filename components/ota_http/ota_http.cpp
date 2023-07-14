@@ -108,7 +108,7 @@ void OtaHttpComponent::flash() {
   const char *headerKeys[] = {"Content-Length", "Content-Type"};
   const size_t headerCount = sizeof(headerKeys) / sizeof(headerKeys[0]);
   size_t total_size;
-  const size_t chunk_size = 1024;  // HTTP_TCP_BUFFER_SIZE;
+  const size_t chunk_size = 1024*600;  // HTTP_TCP_BUFFER_SIZE;
   size_t chunk_start = 0;
   size_t chunk_stop = chunk_size;
   size_t chunk_end;
