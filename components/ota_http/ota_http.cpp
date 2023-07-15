@@ -6,7 +6,6 @@
 // /esphome/components/http_request
 #ifdef USE_ARDUINO
 
-#include "http_request.h"
 #include "ota_http.h"
 #include "esphome/core/defines.h"
 #include "esphome/core/log.h"
