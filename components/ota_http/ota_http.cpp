@@ -166,7 +166,7 @@ void OtaHttpComponent::flash() {
     ESP_LOGW(TAG, "backend->begin error: %d", error_code);
     goto error;  // NOLINT(cppcoreguidelines-avoid-goto)
   }
-
+  ESP_LOGE(TAG, "begin getStream");
   // the data is read chunked
   stream = client_.getStream();
 
