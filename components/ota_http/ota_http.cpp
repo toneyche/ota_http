@@ -83,6 +83,7 @@ bool http_connect(HTTPClient *client_, std::string url) {
   begin_status = client_->begin(url_);
 #elif defined(USE_ESP8266)
   // ESP8266 code not tested!
+  ESP_LOGD(TAG, "Trying to connect to %s 8266", url_.c_str());
   begin_status = client_->begin(*wifi_client_,url_);
 #endif
 
