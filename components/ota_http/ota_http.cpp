@@ -131,7 +131,7 @@ void OtaHttpComponent::flash() {
     ESP_LOGW(TAG, "Not connected to network");
     return;
   }
-
+  ESP_LOGD(TAG, "get data begin");
   // connect to http server using this->url_
   bool status = http_connect(&client_, this->url_);
   if (!status) {
