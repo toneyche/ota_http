@@ -6,6 +6,7 @@
 // /esphome/components/http_request
 #ifdef USE_ARDUINO
 
+#include "http_request.h"
 #include "ota_http.h"
 #include "esphome/core/defines.h"
 #include "esphome/core/log.h"
@@ -83,7 +84,7 @@ bool http_connect(HTTPClient *client_, std::string url) {
   begin_status = client_->begin(url_);
 #elif defined(USE_ESP8266)
   // ESP8266 code not tested!
-  begin_status = client_->begin(get_wifi_client_(),url_);
+  begin_status = client_->begin(*this->get_wifi_client_(),url_);
 #endif
 
   if (!begin_status) {
